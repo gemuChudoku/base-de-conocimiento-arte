@@ -123,14 +123,14 @@ with col_entrada:
     # Prepoblar con el caso seleccionado si existe
     caso_datos = casos.get(caso_seleccionado) or {}
 
-    st.markdown("** Dispositivo disponible**")
+    st.markdown(" **Dispositivo disponible** ")
     tiene_ipad           = st.checkbox("Tengo un iPad", value=caso_datos.get("tiene_ipad", False))
     tiene_tablet_android = st.checkbox("Tengo tablet Android con lápiz", value=caso_datos.get("tiene_tablet_android", False))
     tiene_pc_windows     = st.checkbox("Trabajo en PC/laptop con Windows", value=caso_datos.get("tiene_pc_windows", False))
     tiene_mac            = st.checkbox("Trabajo en Mac", value=caso_datos.get("tiene_mac", False))
     tiene_tableta_grafica= st.checkbox("Tengo tableta gráfica (Wacom u otra)", value=caso_datos.get("tiene_tableta_grafica", False))
 
-    st.markdown("** Nivel de experiencia**")
+    st.markdown(" **Nivel de experiencia** ")
     nivel = st.radio(
         "¿Cuál describe mejor tu nivel?",
         ["Principiante", "Intermedio", "Profesional"],
@@ -145,7 +145,7 @@ with col_entrada:
     es_intermedio   = nivel == "Intermedio"
     es_profesional  = nivel == "Profesional"
 
-    st.markdown("** Tipo de arte o uso**")
+    st.markdown("**Tipo de arte o uso**")
     hace_ilustracion = st.checkbox("Ilustración digital (personajes, escenas)", value=caso_datos.get("hace_ilustracion", False))
     hace_vectorial   = st.checkbox("Gráficos vectoriales (logos, íconos)",      value=caso_datos.get("hace_vectorial", False))
     hace_concept_art = st.checkbox("Concept art / arte conceptual",              value=caso_datos.get("hace_concept_art", False))
@@ -153,7 +153,7 @@ with col_entrada:
     hace_uiux        = st.checkbox("Diseño de interfaces (UI/UX)",               value=caso_datos.get("hace_uiux", False))
     hace_animacion   = st.checkbox("Animación o GIFs",                           value=caso_datos.get("hace_animacion", False))
 
-    st.markdown("** Restricciones**")
+    st.markdown(" **Restricciones**")
     presupuesto_bajo      = st.checkbox("Prefiero herramientas gratuitas o de pago único bajo", value=caso_datos.get("presupuesto_bajo", False))
     requiere_colaboracion = st.checkbox("Necesito colaborar en tiempo real con otros",           value=caso_datos.get("requiere_colaboracion", False))
 
@@ -167,7 +167,7 @@ with col_entrada:
         st.warning("⚠️ Selecciona al menos un tipo de arte o uso.")
 
     ejecutar = st.button(
-        "🔍 Obtener recomendación",
+        "Obtener recomendación",
         type="primary",
         use_container_width=True,
         disabled=not (dispositivo_seleccionado and tipo_seleccionado),
