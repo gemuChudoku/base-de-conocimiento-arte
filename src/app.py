@@ -70,13 +70,13 @@ st.markdown("""
 
 
 # ── Encabezado ────────────────────────────────────────────────
-st.markdown('<p class="titulo-principal">🎨 Recomendador de Herramienta de Dibujo Digital</p>', unsafe_allow_html=True)
+st.markdown('<p class="titulo-principal"> Recomendador de Herramienta de Dibujo Digital</p>', unsafe_allow_html=True)
 st.markdown('<p class="subtitulo">Responde las preguntas sobre tu perfil y el sistema experto te recomendará la herramienta más adecuada.</p>', unsafe_allow_html=True)
 st.divider()
 
 # ── Sidebar: casos de prueba precargados ─────────────────────
 with st.sidebar:
-    st.header("🧪 Casos de prueba")
+    st.header("Casos de prueba")
     st.caption("Carga un caso de ejemplo para probar el sistema.")
 
     casos = {
@@ -110,7 +110,7 @@ with st.sidebar:
             st.write(f"{icono} {PREDICADOS.get(pred, pred)}")
 
     st.divider()
-    st.caption("💡 Puedes cargar un caso y luego ajustarlo manualmente.")
+    st.caption(" Puedes cargar un caso y luego ajustarlo manualmente.")
 
 
 # ── Layout principal: dos columnas ───────────────────────────
@@ -118,12 +118,12 @@ col_entrada, col_resultados = st.columns([1, 1], gap="large")
 
 # ── COLUMNA IZQUIERDA: Formulario de entrada ──────────────────
 with col_entrada:
-    st.subheader("📝 Características del usuario")
+    st.subheader(" Características del usuario")
 
     # Prepoblar con el caso seleccionado si existe
     caso_datos = casos.get(caso_seleccionado) or {}
 
-    st.markdown("**💻 Dispositivo disponible**")
+    st.markdown("** Dispositivo disponible**")
     tiene_ipad           = st.checkbox("Tengo un iPad", value=caso_datos.get("tiene_ipad", False))
     tiene_tablet_android = st.checkbox("Tengo tablet Android con lápiz", value=caso_datos.get("tiene_tablet_android", False))
     tiene_pc_windows     = st.checkbox("Trabajo en PC/laptop con Windows", value=caso_datos.get("tiene_pc_windows", False))
@@ -145,7 +145,7 @@ with col_entrada:
     es_intermedio   = nivel == "Intermedio"
     es_profesional  = nivel == "Profesional"
 
-    st.markdown("**🖼️ Tipo de arte o uso**")
+    st.markdown("** Tipo de arte o uso**")
     hace_ilustracion = st.checkbox("Ilustración digital (personajes, escenas)", value=caso_datos.get("hace_ilustracion", False))
     hace_vectorial   = st.checkbox("Gráficos vectoriales (logos, íconos)",      value=caso_datos.get("hace_vectorial", False))
     hace_concept_art = st.checkbox("Concept art / arte conceptual",              value=caso_datos.get("hace_concept_art", False))
@@ -175,7 +175,7 @@ with col_entrada:
 
 # ── COLUMNA DERECHA: Resultados ───────────────────────────────
 with col_resultados:
-    st.subheader("🏆 Resultados")
+    st.subheader("Resultados")
 
     if ejecutar:
         # Construir diccionario de hechos iniciales
@@ -237,9 +237,9 @@ with col_resultados:
 
         # ── Sección de explicación ────────────────────────────
         st.divider()
-        st.subheader("🔍 Explicación del razonamiento")
+        st.subheader(" Explicación del razonamiento")
 
-        tab1, tab2, tab3 = st.tabs(["📋 Cadena completa", "❓ ¿Por qué?", "📊 Reglas aplicadas"])
+        tab1, tab2, tab3 = st.tabs(["Cadena completa", " ¿Por qué?", " Reglas aplicadas"])
 
         with tab1:
             explicacion = explicar_razonamiento(reglas_aplicadas)
@@ -283,4 +283,4 @@ with col_resultados:
             st.rerun()
 
     else:
-        st.info("👈 Completa el formulario y presiona **Obtener recomendación**.")
+        st.info(" Completa el formulario y presiona **Obtener recomendación**.")
