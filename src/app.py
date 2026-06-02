@@ -130,7 +130,7 @@ with col_entrada:
     tiene_mac            = st.checkbox("Trabajo en Mac", value=caso_datos.get("tiene_mac", False))
     tiene_tableta_grafica= st.checkbox("Tengo tableta gráfica (Wacom u otra)", value=caso_datos.get("tiene_tableta_grafica", False))
 
-    st.markdown("**🎓 Nivel de experiencia**")
+    st.markdown("** Nivel de experiencia**")
     nivel = st.radio(
         "¿Cuál describe mejor tu nivel?",
         ["Principiante", "Intermedio", "Profesional"],
@@ -153,7 +153,7 @@ with col_entrada:
     hace_uiux        = st.checkbox("Diseño de interfaces (UI/UX)",               value=caso_datos.get("hace_uiux", False))
     hace_animacion   = st.checkbox("Animación o GIFs",                           value=caso_datos.get("hace_animacion", False))
 
-    st.markdown("**⚙️ Restricciones**")
+    st.markdown("** Restricciones**")
     presupuesto_bajo      = st.checkbox("Prefiero herramientas gratuitas o de pago único bajo", value=caso_datos.get("presupuesto_bajo", False))
     requiere_colaboracion = st.checkbox("Necesito colaborar en tiempo real con otros",           value=caso_datos.get("requiere_colaboracion", False))
 
