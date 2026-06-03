@@ -67,10 +67,10 @@ caso_datos = casos.get(caso_sel) or {}
 col_entrada, col_resultados = st.columns([1, 1], gap="large")
 
 with col_entrada:
-    st.subheader("📝 Características del usuario")
+    st.subheader(" Características del usuario")
 
     # 1. Dispositivo
-    st.markdown('<p class="seccion-label">💻 1. Dispositivo disponible</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 1. Dispositivo disponible</p>', unsafe_allow_html=True)
     tiene_ipad            = st.checkbox("iPad (cualquier modelo)",               value=caso_datos.get("tiene_ipad", False))
     tiene_iphone          = st.checkbox("iPhone",                                value=caso_datos.get("tiene_iphone", False))
     tiene_tablet_android  = st.checkbox("Tablet Android con lápiz",              value=caso_datos.get("tiene_tablet_android", False))
@@ -80,7 +80,7 @@ with col_entrada:
     tiene_pc_potente      = st.checkbox("PC con buena GPU (para 3D/renderizado)", value=caso_datos.get("tiene_pc_potente", False))
 
     # 2. Experiencia
-    st.markdown('<p class="seccion-label">🎓 2. Nivel de experiencia</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 2. Nivel de experiencia</p>', unsafe_allow_html=True)
     nivel = st.radio("Nivel:", ["Principiante", "Intermedio", "Profesional"],
         index=0 if caso_datos.get("es_principiante") else 2 if caso_datos.get("es_profesional") else 1,
         horizontal=True, label_visibility="collapsed")
@@ -89,7 +89,7 @@ with col_entrada:
     es_profesional  = nivel == "Profesional"
 
     # 3. Tipo de arte 2D
-    st.markdown('<p class="seccion-label">🖼️ 3. Tipo de arte — 2D</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 3. Tipo de arte — 2D</p>', unsafe_allow_html=True)
     hace_ilustracion  = st.checkbox("Ilustración digital (personajes, escenas)",  value=caso_datos.get("hace_ilustracion", False))
     hace_vectorial    = st.checkbox("Gráficos vectoriales (logos, íconos)",       value=caso_datos.get("hace_vectorial", False))
     hace_concept_art  = st.checkbox("Concept art / arte conceptual",              value=caso_datos.get("hace_concept_art", False))
@@ -100,14 +100,14 @@ with col_entrada:
     hace_pixel_art    = st.checkbox("Pixel art (sprites, videojuegos retro)",     value=caso_datos.get("hace_pixel_art", False))
 
     # 4. Tipo de arte 3D
-    st.markdown('<p class="seccion-label">🗿 4. Tipo de arte — 3D</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 4. Tipo de arte — 3D</p>', unsafe_allow_html=True)
     hace_modelado_3d      = st.checkbox("Modelado 3D (objetos, personajes)",      value=caso_datos.get("hace_modelado_3d", False))
     hace_escultura_3d     = st.checkbox("Escultura digital 3D (orgánica)",        value=caso_datos.get("hace_escultura_3d", False))
     hace_render_3d        = st.checkbox("Renderizado 3D fotorealista",            value=caso_datos.get("hace_render_3d", False))
     hace_arte_videojuegos = st.checkbox("Assets / arte para videojuegos",         value=caso_datos.get("hace_arte_videojuegos", False))
 
     # 5. Objetivo
-    st.markdown('<p class="seccion-label">🎯 5. Objetivo del proyecto</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 5. Objetivo del proyecto</p>', unsafe_allow_html=True)
     objetivo = st.radio("¿Para qué es tu proyecto?",
         ["Personal / hobby", "Profesional / laboral", "Educativo / estudio", "Freelance / clientes"],
         index=(
@@ -123,14 +123,14 @@ with col_entrada:
     objetivo_freelance    = objetivo == "Freelance / clientes"
 
     # 6. Industria
-    st.markdown('<p class="seccion-label">🏭 6. Industria o sector</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 6. Industria o sector</p>', unsafe_allow_html=True)
     sector_videojuegos    = st.checkbox("Videojuegos",                            value=caso_datos.get("sector_videojuegos", False))
     sector_cine_tv        = st.checkbox("Cine / TV / animación",                  value=caso_datos.get("sector_cine_tv", False))
     sector_redes_sociales = st.checkbox("Redes sociales / contenido digital",     value=caso_datos.get("sector_redes_sociales", False))
     sector_impresion      = st.checkbox("Impresión (editorial, merchandising)",   value=caso_datos.get("sector_impresion", False))
 
     # 7. Tiempo
-    st.markdown('<p class="seccion-label">⏱️ 7. Tiempo disponible para aprender</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 7. Tiempo disponible para aprender</p>', unsafe_allow_html=True)
     tiempo = st.radio("¿Cuánto tiempo tienes para aprender la herramienta?",
         ["Poco (quiero algo intuitivo ya)", "Moderado (puedo dedicarle semanas)", "Mucho (dispuesto a aprender a fondo)"],
         index=(
@@ -143,7 +143,7 @@ with col_entrada:
     tiempo_mucho    = tiempo == "Mucho (dispuesto a aprender a fondo)"
 
     # 8. Restricciones
-    st.markdown('<p class="seccion-label">⚙️ 8. Restricciones</p>', unsafe_allow_html=True)
+    st.markdown('<p class="seccion-label"> 8. Restricciones</p>', unsafe_allow_html=True)
     presupuesto_bajo      = st.checkbox("Prefiero gratuitas o pago único bajo",   value=caso_datos.get("presupuesto_bajo", False))
     requiere_colaboracion = st.checkbox("Necesito colaborar en tiempo real",      value=caso_datos.get("requiere_colaboracion", False))
     requiere_portabilidad = st.checkbox("Necesito trabajar desde el móvil",       value=caso_datos.get("requiere_portabilidad", False))
