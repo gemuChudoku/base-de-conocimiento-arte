@@ -74,3 +74,13 @@ El sistema contiene:
 | Affinity Designer | Vectorial sin suscripción |
 | Figma | UI/UX y colaboración |
 | Autodesk Sketchbook | Principiantes en Android |
+| Herramienta  | Uso recomendado                                      |
+| Ibis Paint X | Android/iOS, ilustración digital y dibujo móvil      |
+| Blender      | Modelado, animación y renderizado 3D gratuito        |
+| Cinema 4D    | Animación y motion graphics profesionales            |
+| ZBrush       | Escultura digital y modelado de personajes 3D        |
+| Aseprite     | Pixel art y animación de videojuegos retro           |
+| Spine        | Animación 2D para videojuegos mediante esqueletos    |
+| FlipaClip    | Animación 2D cuadro por cuadro en móviles y tabletas |
+| Align Motion | Motion graphics y animación para contenido digital   |
+

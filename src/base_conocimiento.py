@@ -442,6 +442,54 @@ REGLAS = [
         "certeza": 0.91,
         "justificacion": "Si hay tiempo para aprender, Illustrator es la inversión más rentable para trabajo de impresión profesional.",
     },
+
+    #otros
+    {
+    "nombre": "R44",
+    "descripcion": "Manga/cómic + presupuesto bajo → MediBang Paint",
+    "condiciones": [("hace_manga_comic", True), ("presupuesto_bajo", True)],
+    "conclusion": ("recomendar_medibang", True),
+    "certeza": 0.86,
+    "justificacion": "MediBang Paint es una alternativa gratuita especializada en manga y cómic con herramientas de entintado y tramas.",
+    },
+    {
+    "nombre": "R45",
+    "descripcion": "Animación 2D + profesional + cine/TV → Toon Boom Harmony",
+    "condiciones": [
+        ("hace_animacion_2d", True),
+        ("es_profesional", True),
+        ("sector_cine_tv", True)
+    ],
+    "conclusion": ("recomendar_harmony", True),
+    "certeza": 0.95,
+    "justificacion": "Toon Boom Harmony es el estándar profesional utilizado en estudios de animación para series y largometrajes.",
+    },
+    {
+    "nombre": "R46",
+    "descripcion": "Modelado 3D + videojuegos + profesional → Maya",
+    "condiciones": [
+        ("hace_modelado_3d", True),
+        ("sector_videojuegos", True),
+        ("es_profesional", True)
+    ],
+    "conclusion": ("recomendar_maya", True),
+    "certeza": 0.94,
+    "justificacion": "Autodesk Maya es ampliamente utilizado en estudios AAA para modelado, animación y rigging.",
+    },
+    {
+    "nombre": "R47",
+    "descripcion": "Modelado 3D + cine/TV + profesional → Maya",
+    "condiciones": [
+        ("hace_modelado_3d", True),
+        ("sector_cine_tv", True),
+        ("es_profesional", True)
+    ],
+    "conclusion": ("recomendar_maya", True),
+    "certeza": 0.95,
+    "justificacion": "Maya es uno de los estándares de la industria cinematográfica para animación y efectos visuales.",
+    },
+
+
 ]
 
 
@@ -465,4 +513,7 @@ NOMBRES_HERRAMIENTAS = {
     "recomendar_spine":            "🦴 Spine",
     "recomendar_flipaclip":        "✍️ FlipaClip",
     "recomendar_align_motion":     "⚡ Align Motion",
+    "recomendar_medibang":         "📰 MediBang Paint",
+    "recomendar_harmony":          "🎞️ Toon Boom Harmony",
+    "recomendar_maya":             "🎭 Autodesk Maya",
 }
