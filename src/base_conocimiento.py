@@ -108,8 +108,8 @@ REGLAS = [
     },
     {
         "nombre": "R6",
-        "descripcion": "Portabilidad + ilustración → Ibis Paint",
-        "condiciones": [("requiere_portabilidad", True), ("hace_ilustracion", True)],
+        "descripcion": "andriod + ios + Portabilidad + ilustración + concept art → Ibis Paint",
+        "condiciones": [("tiene_tablet_android", True), ("tiene_iphone", True),("requiere_portabilidad", True), ("hace_ilustracion", True), ("hace_concept_art", True),("es_principiante", True)],
         "conclusion": ("recomendar_ibis_paint", True),
         "certeza": 0.87,
         "justificacion": "Ibis Paint X es gratuita en Android e iPhone, muy popular para ilustración móvil.",
