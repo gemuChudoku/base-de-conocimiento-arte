@@ -488,7 +488,7 @@ REGLAS = [
     "certeza": 0.95,
     "justificacion": "Maya es uno de los estándares de la industria cinematográfica para animación y efectos visuales.",
     },
-     {
+    {
         "nombre": "R48",
         "descripcion": "Redes sociales + ilustración + poco tiempo → Ibis Paint",
         "condiciones": [ ("hace_ilustracion", True), ("tiempo_poco", True), ("hace_vectorial", True), ("tiene_tablet_android", True), ("tiene_ipad", True), ("tiene_iphone", True), ("tiempo_moderado", True), ("hace_concept_art", True), ("hace_manga_comic",True)],
