@@ -3,7 +3,7 @@
 Sistema basado en conocimiento que recomienda herramientas de dibujo digital
 según el perfil del usuario, implementado con Python y Streamlit.
 
-**Autores:** [Apellido1] [Apellido2]  
+**Autores:** carlos andres losada diaz  
 **Asignatura:** Inteligencia Artificial II  
 **Institución:** Fundación Universitaria Los Libertadores
 
