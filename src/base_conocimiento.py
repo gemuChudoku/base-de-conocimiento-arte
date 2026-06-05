@@ -337,7 +337,7 @@ REGLAS = [
     {
         "nombre": "R32",
         "descripcion": "Vectorial + presupuesto bajo → Inkscape",
-        "condiciones": [("hace_vectorial", True), ("presupuesto_bajo", True), ("tiene_mac", True), ("tiene_pc_windows", True) ],
+        "condiciones": [("hace_vectorial", True), ("presupuesto_bajo", True) ],
         "conclusion": ("recomendar_inkscape", True),
         "certeza": 0.88,
         "justificacion": "Inkscape es la alternativa gratuita y open-source a Illustrator, cubre el 90% de los casos de uso.",
